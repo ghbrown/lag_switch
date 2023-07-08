@@ -1,0 +1,108 @@
+
+:root {
+    --melee-white:        #f1f1ef;
+    --melee-pink:         #cf98a3;
+    --melee-light-blue:   #92a5cc;
+    --melee-dark-blue:    #6583bf;
+    --background-color-1: #0d0c0a;
+    --background-color-2: #42403c;
+    --text-color:         #d4c6a9;
+}
+
+p, h1 {
+    color: var(--text-color);
+    font-family: monospace;
+    margin: 0;
+    padding-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 2em;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--background-color-1);
+}
+
+.content {
+    position: relative;
+    margin: 30% auto;
+    padding: 0em 2em;
+    display: flex;
+    flex-direction: column;
+    width: min(700px,50vw);
+    text-align: center;
+    align-items: center;
+    background-color: var(--background-color-2);
+    border-radius: 1em;
+}
+
+.keys {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1.4em;
+}
+
+.keys p {
+    padding: 0.3em 0.1em;
+}
+
+p.keycode {
+    font-size: 2.2em;
+    font-weight: 600;
+    border: 0.15em solid var(--text-color);
+    border-radius: 0.4em;
+}
+
+
+.bw {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+p.disclaimer {
+    font-size: 0.6em;
+}
+
+.radio {
+    display: flex;
+    width: 50%;
+    flex-basis: auto;
+    overflow: hidden;
+    border: 0.15em solid var(--text-color);
+    border-radius: 0.5em;
+    margin-bottom: 1.4em;
+}
+
+.radio__input {
+    display: none;
+}
+
+.radio__label {
+    color: var(--text-color);
+    font-family: monospace;
+    font-size: 2em;
+    padding: 0.3em 0.7em;  /*horizontal padding and width of cluster fiddly*/
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.radio__label:not(:last-of-type){
+    border-right: 0.1em solid var(--text-color);
+}
+
+.radio__input:checked + .radio__label {
+    background: var(--background-color-1);
+}
+
